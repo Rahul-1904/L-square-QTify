@@ -88,7 +88,7 @@ const Section = ({ title, apiEndpoint }) => {
       )}
 
       {/* Album Container (Scrollable when collapsed) */}
-      <div className={`${styles.albumContainer} ${isExpanded ? styles.expanded : ""}`} ref={scrollRef}>
+      <div className={`${styles.albumContainer} ${isExpanded ? styles.expanded : styles.notExpanded}`} ref={scrollRef}>
         {albums.map((album) => (
           <SongCard key={album.id} albumName={album.title} follows={album.follows} cardImage={album.image} />
         ))}
