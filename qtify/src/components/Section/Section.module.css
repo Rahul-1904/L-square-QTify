@@ -1,0 +1,101 @@
+.section {
+    margin: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .collapseButton {
+    background: none;
+    border: none;
+    color: #34c94b; 
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .collapseButton:hover {
+    text-decoration: underline;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px;
+  }
+  
+  .sectionContainer {
+    margin: 20px;
+    position: relative;
+  }
+
+  
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  /* .showAll {
+    color: #34c94b;
+    font-weight: bold;
+    cursor: pointer;
+  }
+   */
+  .showAll:hover {
+    text-decoration: underline;
+  }
+  
+  .albumContainer {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  .albumContainer::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .expanded {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    overflow: hidden;
+    white-space: normal;
+  }
+  
+  .leftArrow, .rightArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #34c94b;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+  .leftArrow {
+    left: 0px;
+  }
+  
+  .rightArrow {
+    right: 0px;
+  } 
+
+  
