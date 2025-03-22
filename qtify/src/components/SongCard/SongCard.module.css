@@ -5,7 +5,7 @@
   }
   
   .card {
-    width: 200px;
+    width: 12rem;
     border-radius: 15px;
     background-color: var(--background-color);
     display: flex;

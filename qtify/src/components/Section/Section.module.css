@@ -73,7 +73,7 @@
   
   .expanded {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
     gap: 20px;
     overflow: hidden;
     white-space: normal;
@@ -90,6 +90,7 @@
     cursor: pointer;
     padding: 8px;
     border-radius: 50%;
+    z-index: index 1;
   }
   
   .leftArrow {
