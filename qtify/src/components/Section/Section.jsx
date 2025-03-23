@@ -95,19 +95,45 @@ const Section = ({ title, apiEndpoint }) => {
       </div>
 
       {/* Arrow buttons for scrolling */}
-        <Swiper
+      {isExpanded ? (<div className={`${styles.albumContainer} ${isExpanded ? styles.expanded : styles.notExpanded}`} ref={scrollRef}>
+         {albums.map((album) => (
+          <SongCard key={album.id} albumName={album.title} follows={album.follows} cardImage={album.image} isExpanded={isExpanded}/>
+        ))}
+      </div>):(<Swiper
             modules={[Navigation]}
-            spaceBetween={10}
+            spaceBetween={40}
             slidesPerView={7}
             navigation={true}
             loop={false}
+            style={{padding: "0px 20px"}}
         >
             {albums.map((album) => (
               <SwiperSlide key={album.id}>
                 <SongCard albumName={album.title} follows={album.follows} cardImage={album.image} isExpanded={isExpanded}/>
               </SwiperSlide>
             ))}
-        </Swiper>
+            
+        </Swiper>)}
+      {/* <div className={`${styles.albumContainer} ${isExpanded ? styles.expanded : styles.notExpanded}`} ref={scrollRef}>
+         {albums.map((album) => (
+          <SongCard key={album.id} albumName={album.title} follows={album.follows} cardImage={album.image} isExpanded={isExpanded}/>
+        ))}
+      </div>
+        <Swiper
+            modules={[Navigation]}
+            spaceBetween={40}
+            slidesPerView={7}
+            navigation={true}
+            loop={false}
+            style={{padding: "0px 20px"}}
+        >
+            {albums.map((album) => (
+              <SwiperSlide key={album.id}>
+                <SongCard albumName={album.title} follows={album.follows} cardImage={album.image} isExpanded={isExpanded}/>
+              </SwiperSlide>
+            ))}
+            
+        </Swiper> */}
     </div>
   );
 };
