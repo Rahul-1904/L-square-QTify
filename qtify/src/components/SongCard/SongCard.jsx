@@ -36,9 +36,9 @@ import {
 
 // export default SongCard;
 
-const SongCard = ({ albumName, follows, cardImage }) => {
+const SongCard = ({ albumName, follows, cardImage, isExpanded }) => {
     return (
-        <Card className={styles.card} sx={{"borderRadius": "12px", "backgroundColor": "unset"}}>
+        <Card className={isExpanded?styles.cardExpanded : styles.card} sx={{"borderRadius": "12px", "backgroundColor": "unset"}}>
             <CardMedia
                 component="img"
                 height="100%"
