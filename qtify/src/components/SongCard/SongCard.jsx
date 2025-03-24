@@ -36,7 +36,7 @@ import {
 
 // export default SongCard;
 
-const SongCard = ({ albumName, follows, cardImage, isExpanded }) => {
+const SongCard = ({ albumName, follows, cardImage, isExpanded , isAlbumCard=true}) => {
     return (
         <Card className={isExpanded?styles.cardExpanded : styles.card} sx={{"borderRadius": "12px", "backgroundColor": "unset"}}>
             <CardMedia
@@ -47,7 +47,7 @@ const SongCard = ({ albumName, follows, cardImage, isExpanded }) => {
                 className={styles.albumImage}
             />
             <CardContent className={styles.cardContent} sx={{"padding": "5px !important", "backgroundColor": "#fff", "width": "100%"}}>
-                <Chip label={`${follows} Follows`} className={styles.chip} />
+                <Chip label={isAlbumCard ? `${follows} Follows` : `${follows} Likes`} className={styles.chip} />
             </CardContent>
             <Typography sx={{"color": "#fff"}}>
                 {albumName}

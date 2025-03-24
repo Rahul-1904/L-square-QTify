@@ -1,0 +1,23 @@
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+.Mui-selected {
+    color: #34C94B;
+}
+
+.tab {
+    color: #ffffff !important; /* Default text color */
+    font-weight: bold;
+  }
+  
